@@ -7,11 +7,15 @@ namespace C_Sharp_OOP
         static void Main(string[] args)
         {
             // Encapsulation -> 
+
             Student student = new();
             student.SetName("Ammar");
             student.SetAge(23);
             student.SetMarks(90);
             student.Detail();
+
+            Student student2 = new("Ammar", 23, 90);
+            student2.Detail("Student2");
 
             // Value Type vs Reference Type
             // Stack Memory vs Heap Memory

@@ -7,12 +7,29 @@ namespace C_Sharp_OOP.com.StudentManagement
         private int age;
         private int marks;
 
+        // Default Constructor
+        public Student()
+        {
+            Console.WriteLine("Student Default Constructor Called");
+            name = "Unknown";
+            age = 1;
+            marks = 0;
+        }
+        // Parameterized Constructor
+        public Student(string n, int a, int m)
+        {
+            Console.WriteLine("Student Parameterized Constructor Called");
+            name = n;
+            age = a;
+            marks = m;
+        }
+
         // Setters
         public void SetName(string n)
         {
             if (!string.IsNullOrEmpty(n))
             {
-                this.name = n;
+                name = n;
             }
             else
             {
@@ -23,7 +40,7 @@ namespace C_Sharp_OOP.com.StudentManagement
         {
             if (a > 0)
             {
-                this.age = a;
+                age = a;
             }
             else
             {
@@ -38,7 +55,7 @@ namespace C_Sharp_OOP.com.StudentManagement
             }
             else
             {
-                this.marks = m;
+                marks = m;
             }
 
         }
@@ -47,6 +64,13 @@ namespace C_Sharp_OOP.com.StudentManagement
         {
             Console.WriteLine($"Name: {name}, Age: {age}, Marks: {marks}");
         }
+        // method overloading -> same method name with different parameters
+        public void Detail(string message)
+        {
+            Console.WriteLine(message);
+            Console.WriteLine($"Name: {name}, Age: {age}, Marks: {marks}");
+        }
+
     }
 
     // Access Specifiers
