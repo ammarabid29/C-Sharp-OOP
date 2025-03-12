@@ -5,7 +5,8 @@ namespace C_Sharp_OOP.com.StudentManagement
     {
         private string? name;
         private int marks;
-
+        // property
+        public int Semester { get; private set; }
         // full property
         private int age;
         public int MyAge
@@ -23,8 +24,41 @@ namespace C_Sharp_OOP.com.StudentManagement
                 }
             }
         }
-        // property
-        public int Semester { get; private set; }
+        // indexer
+        private readonly int[] array = [1, 2, 3, 4, 5];
+        public int this[int index]
+        {
+            get
+            {
+                if (index >= 0 && index < array.Length)
+                {
+                    return array[index];
+                }
+                else
+                {
+                    Console.WriteLine("Index out of range");
+                }
+                return 0;
+            }
+            set
+            {
+                if (index >= 0 && index < array.Length)
+                {
+                    if (value > 0)
+                    {
+                        array[index] = value;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Value should be greater than 0");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Index out of range");
+                }
+            }
+        }
 
         // Default Constructor
         public Student()
@@ -93,13 +127,15 @@ namespace C_Sharp_OOP.com.StudentManagement
 
     }
 
-    // Access Specifiers
-    // public -> Accessible from anywhere
-    // private -> Accessible only within the class  
-    // protected -> Accessible within the class and derived class
-    // internal -> Accessible within the Project / Solution
-    // protected internal -> Accessible within the Project / Solution and derived class
-    // private protected -> Accessible within the Project / Solution and derived class but not outside the Project / Solution
+    /*
+    Access Specifiers
+    public -> Accessible from anywhere
+    private -> Accessible only within the class  
+    protected -> Accessible within the class and derived class
+    internal -> Accessible within the Project / Solution
+    protected internal -> Accessible within the Project / Solution and derived class
+    private protected -> Accessible within the Project / Solution and derived class but not outside the Project / Solution
+    */
 
     // Value Type vs Reference Type
     // Stack Memory vs Heap Memory
@@ -116,7 +152,9 @@ namespace C_Sharp_OOP.com.StudentManagement
             Console.WriteLine($"Age: {age}, Marks: {marks}");
         }
     }
+    */
 
+    /*
     // struct is value type and store in stack memory
     // struct is used for small data structure
     struct StudentStruct

@@ -7,6 +7,13 @@ namespace C_Sharp_OOP
         static void Main(string[] args)
         {
             // Encapsulation -> 
+
+            // Parameterized Constructor
+            Student student2 = new("Ammar", 23, 90, 2);
+            // student2.Detail("Student2");
+            // Console.WriteLine($"Student 2 Semester: {student2.Semester}");
+
+            // Default Constructor
             Student student = new();
             student.SetName("Ammar");
             student.SetMarks(90);
@@ -14,18 +21,18 @@ namespace C_Sharp_OOP
             // auto property -> can't be set from outside of class
             // set through other function
             student.SetSemester(2);
-            Console.WriteLine($"Student Semester: {student.Semester}");
+            // Console.WriteLine($"Student Semester: {student.Semester}");
 
             // full property -> can be set from outside of class
             student.MyAge = 23;
-            Console.WriteLine($"Student Age: {student.MyAge}");
+            // Console.WriteLine($"Student Age: {student.MyAge}");
 
-            student.Detail();
+            // student.Detail();
 
-            // Parameterized Constructor
-            // Student student2 = new("Ammar", 23, 90, 2);
-            // student2.Detail("Student2");
-            // Console.WriteLine($"Student 2 Semester: {student2.Semester}");
+            // indexer 
+            student[200] = -10;
+
+
 
             // Value Type vs Reference Type
             // Stack Memory vs Heap Memory
