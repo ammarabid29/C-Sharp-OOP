@@ -6,6 +6,16 @@ namespace C_Sharp_OOP
     {
         static void Main(string[] args)
         {
+            // Encapsulation -> 
+            Student student = new();
+            student.SetName("Ammar");
+            student.SetAge(23);
+            student.SetMarks(90);
+            student.Detail();
+
+            // Value Type vs Reference Type
+            // Stack Memory vs Heap Memory
+            /*
             Console.WriteLine("Struct -> Value Type -> Stack Memory");
             // variable store in stack which have value of object
             StudentStruct student1 = new() // value type -> stack
@@ -37,7 +47,7 @@ namespace C_Sharp_OOP
             student4.age = 25;
             student4.Detail();
             student3.Detail();
-
+            */
         }
     }
 
