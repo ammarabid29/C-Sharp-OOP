@@ -1,36 +1,12 @@
-﻿namespace C_Sharp_OOP
+﻿using C_Sharp_OOP.com.StudentManagement;
+
+namespace C_Sharp_OOP
 {
-    // struct is value type and store in stack memory
-    // struct is used for small data structure
-    struct StudentStruct
-    {
-        public int age;
-        public int marks;
-
-        public readonly void Detail()
-        {
-            Console.WriteLine($"Age: {age}, Marks: {marks}");
-        }
-    }
-
-    // class is reference type and store in heap memory
-    // class is used for large data structure
-    class StudentClass
-    {
-        public int age;
-        public int marks;
-
-        public void Detail()
-        {
-            Console.WriteLine($"Age: {age}, Marks: {marks}");
-        }
-    }
-
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Stuct -> Value Type -> Stack Memory");
+            Console.WriteLine("Struct -> Value Type -> Stack Memory");
             // variable store in stack which have value of object
             StudentStruct student1 = new() // value type -> stack
             {
