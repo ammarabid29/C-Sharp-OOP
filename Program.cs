@@ -10,13 +10,13 @@ namespace C_Sharp_OOP
             Student student = new();
             student.SetName("Ammar");
             student.SetMarks(90);
-            student.SetSemester(8);
 
-            // full property
+            // auto property -> can't be set from outside of class
+            // set through other function
             student.SetSemester(2);
-            Console.WriteLine($"Student Semester: {student.MySemester}");
+            Console.WriteLine($"Student Semester: {student.Semester}");
 
-            // auto property
+            // full property -> can be set from outside of class
             student.MyAge = 23;
             Console.WriteLine($"Student Age: {student.MyAge}");
 
