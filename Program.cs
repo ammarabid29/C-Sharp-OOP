@@ -10,12 +10,22 @@ namespace C_Sharp_OOP
 
             Student student = new();
             student.SetName("Ammar");
-            student.SetAge(23);
             student.SetMarks(90);
+            student.SetSemester(8);
+
+            // auto property
+            student.SetSemester(2);
+            Console.WriteLine($"Student Semester: {student.Semester}");
+
+            // full property
+            student.MyAge = 23;
+            Console.WriteLine($"Student Age: {student.MyAge}");
+
             student.Detail();
 
-            Student student2 = new("Ammar", 23, 90);
-            student2.Detail("Student2");
+            // Student student2 = new("Ammar", 23, 90, 2);
+            // student2.Detail("Student2");
+            // Console.WriteLine($"Student 2 Semester: {student2.Semester}");
 
             // Value Type vs Reference Type
             // Stack Memory vs Heap Memory

@@ -4,8 +4,27 @@ namespace C_Sharp_OOP.com.StudentManagement
     class Student
     {
         private string? name;
-        private int age;
         private int marks;
+
+        // full property
+        private int age;
+        public int MyAge
+        {
+            get { return age; }
+            set
+            {
+                if (value < 0)
+                {
+                    Console.WriteLine("Age should be greater than 0");
+                }
+                else
+                {
+                    age = value;
+                }
+            }
+        }
+        // property
+        public int Semester { get; private set; }
 
         // Default Constructor
         public Student()
@@ -14,14 +33,16 @@ namespace C_Sharp_OOP.com.StudentManagement
             name = "Unknown";
             age = 1;
             marks = 0;
+            Semester = 1;
         }
         // Parameterized Constructor
-        public Student(string n, int a, int m)
+        public Student(string n, int a, int m, int s)
         {
             Console.WriteLine("Student Parameterized Constructor Called");
             name = n;
             age = a;
             marks = m;
+            Semester = s;
         }
 
         // Setters
@@ -36,17 +57,6 @@ namespace C_Sharp_OOP.com.StudentManagement
                 Console.WriteLine("Name should not be empty");
             }
         }
-        public void SetAge(int a)
-        {
-            if (a > 0)
-            {
-                age = a;
-            }
-            else
-            {
-                Console.WriteLine("Age should be greater than 0");
-            }
-        }
         public void SetMarks(int m)
         {
             if (m < 0)
@@ -57,18 +67,28 @@ namespace C_Sharp_OOP.com.StudentManagement
             {
                 marks = m;
             }
-
+        }
+        public void SetSemester(int s)
+        {
+            if (s < 0)
+            {
+                Console.WriteLine("Semester should be greater than 0");
+            }
+            else
+            {
+                Semester = s;
+            }
         }
 
         public void Detail()
         {
-            Console.WriteLine($"Name: {name}, Age: {age}, Marks: {marks}");
+            Console.WriteLine($"Name: {name}, Age: {age}, Marks: {marks}, Semester: {Semester}");
         }
         // method overloading -> same method name with different parameters
         public void Detail(string message)
         {
             Console.WriteLine(message);
-            Console.WriteLine($"Name: {name}, Age: {age}, Marks: {marks}");
+            Console.WriteLine($"Name: {name}, Age: {age}, Marks: {marks}, Semester: {Semester}");
         }
 
     }
