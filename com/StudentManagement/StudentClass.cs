@@ -24,7 +24,7 @@ namespace C_Sharp_OOP.com.StudentManagement
             }
         }
         // property
-        public int Semester { get; private set; }
+        public int MySemester { get; private set; }
 
         // Default Constructor
         public Student()
@@ -33,7 +33,7 @@ namespace C_Sharp_OOP.com.StudentManagement
             name = "Unknown";
             age = 1;
             marks = 0;
-            Semester = 1;
+            MySemester = 1;
         }
         // Parameterized Constructor
         public Student(string n, int a, int m, int s)
@@ -42,7 +42,7 @@ namespace C_Sharp_OOP.com.StudentManagement
             name = n;
             age = a;
             marks = m;
-            Semester = s;
+            MySemester = s;
         }
 
         // Setters
@@ -76,19 +76,19 @@ namespace C_Sharp_OOP.com.StudentManagement
             }
             else
             {
-                Semester = s;
+                MySemester = s;
             }
         }
 
         public void Detail()
         {
-            Console.WriteLine($"Name: {name}, Age: {age}, Marks: {marks}, Semester: {Semester}");
+            Console.WriteLine($"Name: {name}, Age: {age}, Marks: {marks}, Semester: {MySemester}");
         }
         // method overloading -> same method name with different parameters
         public void Detail(string message)
         {
             Console.WriteLine(message);
-            Console.WriteLine($"Name: {name}, Age: {age}, Marks: {marks}, Semester: {Semester}");
+            Console.WriteLine($"Name: {name}, Age: {age}, Marks: {marks}, Semester: {MySemester}");
         }
 
     }

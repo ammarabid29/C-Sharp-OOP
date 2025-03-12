@@ -7,22 +7,22 @@ namespace C_Sharp_OOP
         static void Main(string[] args)
         {
             // Encapsulation -> 
-
             Student student = new();
             student.SetName("Ammar");
             student.SetMarks(90);
             student.SetSemester(8);
 
-            // auto property
-            student.SetSemester(2);
-            Console.WriteLine($"Student Semester: {student.Semester}");
-
             // full property
+            student.SetSemester(2);
+            Console.WriteLine($"Student Semester: {student.MySemester}");
+
+            // auto property
             student.MyAge = 23;
             Console.WriteLine($"Student Age: {student.MyAge}");
 
             student.Detail();
 
+            // Parameterized Constructor
             // Student student2 = new("Ammar", 23, 90, 2);
             // student2.Detail("Student2");
             // Console.WriteLine($"Student 2 Semester: {student2.Semester}");
