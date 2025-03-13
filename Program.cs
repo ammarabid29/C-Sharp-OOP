@@ -7,6 +7,25 @@ namespace C_Sharp_OOP
     {
         static void Main(string[] args)
         {
+            // Lambda Expression
+            /*
+            var isEven = (int n) => n % 2 == 0;
+            Console.WriteLine("Number is Even: "+isEven(7));
+
+            Func<int, bool> isOdd=(int n)=> {
+               Console.Write("Number is Odd: ");
+               return n % 2 == 1;
+            };
+            Console.WriteLine(isOdd(7));
+
+            List<int> ints = new() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            List<int> odds= [.. ints.Where((n)=>n%2==1)];
+            for (int i = 0; i < odds.Count; i++)
+            {
+                Console.Write(odds[i]+" ");
+            }
+            */
+
             // File Handling
             /*
             // File Creation
