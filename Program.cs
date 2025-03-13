@@ -7,9 +7,55 @@ namespace C_Sharp_OOP
     {
         static void Main(string[] args)
         {
+            // File Handling
+            /*
+            // File Creation
+            string fPath = "D:\\test.txt";
+            //using (FileStream fs = File.Create(fPath))
+            //{
+            //    // FileStream is automatically closed and disposed of here
+            //}
+            if (File.Exists(fPath))
+            {
+                //Writing text in File
+                //string[] lines =
+                //[
+                //    "Welcome User.... This is sample text.",
+                //    "Line 1",
+                //    "Line 2",
+                //    "Line 3"
+                //];
+                //File.WriteAllText(fPath, string.Join("\n", lines));
+
+                // Read text from file
+                string[] lines = File.ReadAllLines(fPath);
+                foreach (var line in lines)
+                {
+                    Console.WriteLine(line);
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("File Creation Failed");
+            }
+
+            // Directory Creation
+            string dirPath= @"D:\test\demo";
+            Directory.CreateDirectory(dirPath);
+            if (Directory.Exists(dirPath))
+            {
+                Console.WriteLine("Directory Created Successfully");
+            }
+            else
+            {
+                Console.WriteLine("Directory Creation Failed");
+            }
+            */
+
             // Composition
             /*
-             */
+             
             // Composition is "Has A" relationship
             // Both departments have life cycle depends on university object
             University university = new();
@@ -28,6 +74,7 @@ namespace C_Sharp_OOP
                     Console.WriteLine($"Number of Computer Labs: {((CompDepartment)item).NumberOfComputerLabs}");
                 }
             }
+            */
 
 
             // Polymorphism
