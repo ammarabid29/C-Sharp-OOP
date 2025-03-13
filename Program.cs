@@ -1,4 +1,4 @@
-﻿using C_Sharp_OOP.com.StudentManagement;
+﻿using C_Sharp_OOP.com.InventoryMngSystem;
 
 namespace C_Sharp_OOP
 {
@@ -6,8 +6,25 @@ namespace C_Sharp_OOP
     {
         static void Main(string[] args)
         {
-            // Encapsulation -> 
+            // Inheritance
+            /*
+           
+            */
+            Hardware hardware = new("CPU",1)
+            {
+                Price = 1000,
+                Size = 10, 
+            };
+            hardware.Details();
+            // if we have show method in hardware then it call that method
+            // otherwise it call show method of parent class - > product
+            hardware.Show();
 
+
+
+
+            // Encapsulation 
+            /*
             // Parameterized Constructor
             Student student2 = new("Ammar", 23, 90, 2);
             // student2.Detail("Student2");
@@ -31,7 +48,7 @@ namespace C_Sharp_OOP
 
             // indexer 
             student[200] = -10;
-
+            */
 
 
             // Value Type vs Reference Type
