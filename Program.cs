@@ -1,4 +1,5 @@
-﻿using C_Sharp_OOP.com.PurePolymorphism;
+﻿using C_Sharp_OOP.com.Composition;
+using C_Sharp_OOP.com.PurePolymorphism;
 
 namespace C_Sharp_OOP
 {
@@ -6,6 +7,29 @@ namespace C_Sharp_OOP
     {
         static void Main(string[] args)
         {
+            // Composition
+            /*
+             */
+            // Composition is "Has A" relationship
+            // Both departments have life cycle depends on university object
+            University university = new();
+            university.AddDep("Arts", "Ali", AllDepartments.arts, 100);
+            university.AddDep("Comp", "Ahmed", AllDepartments.comp, 10);
+
+            foreach (var item in university.Departments)
+            {
+                Console.WriteLine($"Department Name: {item.Name}, Director: {item.Director}");
+                if (item is ArtsDepartment)
+                {
+                    Console.WriteLine($"Number of Students: {((ArtsDepartment)item).NumberOfStudents}");
+                }
+                else if (item is CompDepartment)
+                {
+                    Console.WriteLine($"Number of Computer Labs: {((CompDepartment)item).NumberOfComputerLabs}");
+                }
+            }
+
+
             // Polymorphism
             /*
             
@@ -14,7 +38,7 @@ namespace C_Sharp_OOP
             // this object only have access to methods of transformer class
             transformer.Run();
             transformer.Show();
-             */
+            
             // Use interface for pure polymorphism
             // interface class
             ITransformer transformer = new Car();
@@ -22,10 +46,7 @@ namespace C_Sharp_OOP
           
             IExample transformer2 = new Car();
             transformer2.Run();
-
-            
-
-
+             */
 
             // Inheritance
             /*
