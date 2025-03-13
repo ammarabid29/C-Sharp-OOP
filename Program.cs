@@ -1,4 +1,4 @@
-﻿using C_Sharp_OOP.com.InventoryMngSystem;
+﻿using C_Sharp_OOP.com.PurePolymorphism;
 
 namespace C_Sharp_OOP
 {
@@ -6,10 +6,29 @@ namespace C_Sharp_OOP
     {
         static void Main(string[] args)
         {
+            // Polymorphism
+            /*
+            
+            // abstract class 
+            Transformer transformer = new Car();         
+            // this object only have access to methods of transformer class
+            transformer.Run();
+            transformer.Show();
+             */
+            // Use interface for pure polymorphism
+            // interface class
+            ITransformer transformer = new Car();
+            transformer.Run();
+          
+            IExample transformer2 = new Car();
+            transformer2.Run();
+
+            
+
+
+
             // Inheritance
             /*
-           
-            */
             Hardware hardware = new("CPU",1)
             {
                 Price = 1000,
@@ -19,9 +38,7 @@ namespace C_Sharp_OOP
             // if we have show method in hardware then it call that method
             // otherwise it call show method of parent class - > product
             hardware.Show();
-
-
-
+            */
 
             // Encapsulation 
             /*
