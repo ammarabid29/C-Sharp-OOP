@@ -5,8 +5,59 @@ namespace C_Sharp_OOP
 {
     class Program
     {
+        static void Method1() {
+            for (int i = 1; i <= 5; i++)
+            {
+                Console.WriteLine("Method 1: " + i);
+            }
+            Console.WriteLine("Method1 ended using: "+Thread.CurrentThread.Name);
+        }
+
+        static void Method2()
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                Console.WriteLine("Method 2: " + i);
+                if (i==2)
+                {
+                    Console.WriteLine("Perform Database Actions");
+                    Thread.Sleep(10000);
+                    Console.WriteLine("Actions Completed");
+                }
+            }
+            Console.WriteLine("Method2 ended using: " + Thread.CurrentThread.Name);
+        }
+
+        static void Method3()
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                Console.WriteLine("Method 3: " + i);
+            }
+            Console.WriteLine("Method3 ended using: " + Thread.CurrentThread.Name);
+        }
         static void Main(string[] args)
         {
+            // Multi Threading
+            
+            Thread t1 = new(Method1)
+            {
+                Name = "Thread 1"
+            };
+            Thread t2 = new(Method2)
+            {
+                Name = "Thread 2"
+            };
+            Thread t3 = new(Method3)
+            {
+                Name = "Thread 3"
+            };
+            t1.Start();
+            t2.Start();
+            t3.Start();
+
+            Console.WriteLine("Thread Ended");
+
             // Lambda Expression
             /*
             var isEven = (int n) => n % 2 == 0;
